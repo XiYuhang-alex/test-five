@@ -4,7 +4,10 @@ const addBtn = document.querySelector('#add-btn');
 const list = document.querySelector('#list');
 const tip = document.querySelector('#tip');
 
-let shows = [];
+let shows = JSON.parse(localStorage.getItem('shows') || '[]');
+const save = () => {
+    localStorage.setItem('shows', JSON.stringify(shows));
+};
 
 const render = () => {
     list.innerHTML = '';
@@ -32,6 +35,7 @@ addBtn.onclick = () => {
     shows.push({ id: Date.now(), name: name, genre: genre });
     nameInput.value = '';
     genreInput.value = '';
+    save ();
     render();
 };
 
