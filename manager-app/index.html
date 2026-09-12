@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的待看电视剧</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 20px auto; padding: 0 16px; }
+        .tip { color: red; font-size: 14px; min-height: 20px; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>我的待看电视剧</h1>
+
+    <!-- 添加区 -->
+    <div>
+        <input type="text" id="name-input" placeholder="剧名">
+        <input type="text" id="genre-input" placeholder="类型">
+        <button id="add-btn">添加</button>
+    </div>
+    <p class="tip" id="tip"></p >
+
+    <!-- 列表区 -->
+    <ul id="list"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>
